@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+* SurchX Surcharge admin configuration
+*
+* @category    Surchx
+* @package     Surchx_Surcharge
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Surchx_Surcharge" setup_version="1.0.0">
+    </module>
+</config>

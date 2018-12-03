@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+* SurchX Surcharge admin configuration
+*
+* @category    Surchx
+* @package     Surchx_Surcharge
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <surchx_stripe>
+                <active>0</active>
+                <model>Surchx\Surcharge\Model\Payment</model>
+                <payment_action>authorize_capture</payment_action>
+                <title>Stripe</title>
+                <api_key backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <cctypes>AE,VI,MC,DI,JCB</cctypes>
+                <allowspecific>0</allowspecific>
+                <min_order_total>0.50</min_order_total>
+            </surchx_stripe>
+        </payment>
+    </default>
+</config>

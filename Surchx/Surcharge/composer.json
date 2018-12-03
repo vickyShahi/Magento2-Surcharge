@@ -1,0 +1,17 @@
+{
+    "name": "surchx/surcharge",
+    "description": "This module adds transaction fee as per type of credit card and params to order total before checkout and displays that transaction fee in all order related views.",
+    "require": {
+        "php": "7.0.2|7.0.4|~7.0.6|^7.1"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Surchx\\Surcharge\\": ""
+        }
+    }
+}

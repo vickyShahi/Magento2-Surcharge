@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+* SurchX Surcharge admin configuration
+*
+* @category    Surchx
+* @package     Surchx_Surcharge
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <virtualType name="Surchx\Surcharge\Model\ConfigProvider" type="Magento\Payment\Model\CcGenericConfigProvider">
+        <arguments>
+            <argument name="methodCodes" xsi:type="array">
+                <item name="surchx_stripe" xsi:type="const">Surchx\Surcharge\Model\Payment::CODE</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Checkout\Model\CompositeConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="surchx_stripe_config_provider" xsi:type="object">Surchx\Surcharge\Model\ConfigProvider</item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>
